@@ -1,4 +1,4 @@
-name: Build UtilityStartAllBack
+name: Build SABActivator
 
 on:
   workflow_dispatch:
@@ -15,11 +15,11 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build with MSBuild
-      run: msbuild UtilityStartAllBack.sln /p:Configuration=Release
+      run: msbuild SABActivator.sln /p:Configuration=Release
 
     - name: Upload compiled exe
       uses: actions/upload-artifact@v4
       with:
-        name: UtilityStartAllBack
+        name: SABActivator
         path: |
           **/bin/Release/*.exe
