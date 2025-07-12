@@ -15,7 +15,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build with MSBuild
-      run: msbuild utility-startallback.sln /p:Configuration=Release
+      run: msbuild UtilityStartAllBack.sln /p:Configuration=Release
 
     - name: Upload compiled exe
       uses: actions/upload-artifact@v4
